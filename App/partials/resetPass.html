@@ -1,0 +1,73 @@
+
+
+
+
+
+<script>
+    $(document).ready(function() {
+
+    $("#reset").click(function() {
+        function newpassValidate() {
+
+
+            var currentPass = document.getElementById("currentPass").value;
+            var newPass = document.getElementById("newPass").value;
+            var cnewPass = document.getElementById("cnewPass").value;
+            if (currentPass != "" && newPass != "" && cnewPass != "") {
+                if (currentPass != newPass) {
+                    if (newPass == cnewPass) {
+                        myApp.UserModule.saveNewpass(currentPass, newPass);
+                        alert("Password changed.");
+                        document.location.href = "userHome1.html";
+
+                        return true;
+
+                    }
+                    else {
+                        alert("Confirm password is not same as your new password.");
+                        return false;
+                    }
+                }
+                else {
+                    alert(" This Is Your Old Password,Please Provide A New Password");
+                    return false;
+                }
+            }
+            else {
+                alert("All Fields Are Required");
+                return false;
+            }
+        }
+
+    });
+        });
+
+</script>
+
+
+</head>
+<body>
+<form name="resetForm" id="resetForm" action="" method="get" >
+    <fieldset>
+        <legend>Reset Form</legend>
+        <div>
+            <label for="currentPass">Current Password:</label>
+            <input type="text" id="currentPass" name="currentPass" autofocus required/>
+        </div>
+        <div>
+            <label for="newPass">New Password:</label>
+            <input type="text" id="newPass" name="newPass" autofocus required/>
+        </div>
+        <div>
+            <label for="cnewPass"> Confirm new Password:</label>
+            <input type="text" id="cnewPass" name="cnewPass" autofocus required/>
+        </div>
+        <div>
+            <button type="button" id="reset">Reset</button>
+        </div>
+    </fieldset>
+</form>
+
+</body>
+
+</html>

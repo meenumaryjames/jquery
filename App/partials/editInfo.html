@@ -1,0 +1,46 @@
+<script>
+    $(document).ready(function() {
+
+        $("#update").click(function() {
+            function update()
+
+                {
+
+
+                    var nusername = document.getElementById("nusername").value;
+                    var npassword = document.getElementById("npassword").value;
+                    var nemail = document.getElementById("nemail").value;
+                    var obj = new myApp.UserModule();
+                    obj.upUser(extUser);
+                }
+
+                });
+    });
+
+</script>
+</head>
+<body>
+<form name="editForm" id="editForm"  >
+    <fieldset>
+        <legend>Reset Form</legend>
+        <div>
+            <label for="username">User name:</label>
+            <input type="text" id="username" name="username" autofocus required/>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" autofocus required/>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="emIL" id="email" name="email" autofocus required/>
+        </div>
+        <div>
+            <input type="button"  id="update"  />
+        </div>
+    </fieldset>
+</form>
+
+</body>
+
+</html>

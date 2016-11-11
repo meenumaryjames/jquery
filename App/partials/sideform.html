@@ -1,0 +1,42 @@
+<script>
+    $(document).ready(function () {
+
+        $("#resetLink").click(function () {
+            $("#maincontent").load("App/partials/resetPass.html");
+        });
+        $("#editLink").click(function () {
+            $("#maincontent").load("App/partials/editInfo.html");
+        });
+        $("#signoutLink").click(function () {
+            $("#maincontent").load("App/partials/signout.html.html");
+        });
+
+
+
+    });
+</script>
+
+
+
+
+
+<section id="sidebar">
+    <div id="sideHeader">
+        <span>Quick Links</span>
+    </div>
+    <nav id="sideMenu">
+        <ul>
+            <li>
+                <a href="javascript:void(0)" id="resetLink">Reset password</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" id="editLink">Edit info</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" id=signoutLink>Sign out</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+
+
